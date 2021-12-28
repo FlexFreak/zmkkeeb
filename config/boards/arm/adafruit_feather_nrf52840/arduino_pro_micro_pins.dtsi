@@ -5,8 +5,8 @@
  */
 
 / {
-	feather_header: connector {
-		compatible = "adafruit-feather-header";
+	pro_micro: connector {
+		compatible = "arduino-pro-micro";
 		#gpio-cells = <2>;
 		gpio-map-mask = <0xffffffff 0xffffffc0>;
 		gpio-map-pass-thru = <0 0x3f>;
@@ -34,6 +34,7 @@
 	};
 };
 
-feather_serial: &uart0 {};
-feather_i2c: &i2c0 {};
-feather_spi: &spi1 {};
+pro_micro_d: &pro_micro {};
+pro_micro_i2c: &i2c0 {};
+pro_micro_spi: &spi0 {};
+pro_micro_serial: &uart0 {};
